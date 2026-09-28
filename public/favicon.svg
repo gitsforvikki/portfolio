@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="vGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09090b" />
+      <stop offset="100%" stop-color="#18181b" />
+    </linearGradient>
+  </defs>
+
+  <!-- Squircle container -->
+  <rect width="32" height="32" rx="7.5" fill="url(#bgGrad)" stroke="#27272a" stroke-width="1.2" />
+
+  <!-- Code bracket hint (left subtle glow) -->
+  <path d="M7 12 L4 16 L7 20" fill="none" stroke="#3b82f6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.4" />
+
+  <!-- Monogram V -->
+  <path d="M10.5 9.5 L15.2 21.5 C15.5 22.3 16.5 22.3 16.8 21.5 L21.5 9.5" fill="none" stroke="url(#vGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Code bracket hint (right subtle glow) -->
+  <path d="M25 12 L28 16 L25 20" fill="none" stroke="#a855f7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.4" />
+
+  <!-- Glowing accent dot (matching Vikash. branding) -->
+  <circle cx="21" cy="21.5" r="1.6" fill="#38bdf8" />
+</svg>

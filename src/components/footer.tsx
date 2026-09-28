@@ -32,7 +32,7 @@ const SOCIAL_LINKS = [
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://linkedin.com/in/vikash-developer/",
     icon: (props: React.SVGProps<SVGSVGElement>) => (
       <svg
         {...props}
@@ -53,7 +53,7 @@ const SOCIAL_LINKS = [
   },
   {
     name: "Email",
-    href: "#contact",
+    href: "mailto:vk6484412@gmail.com",
     icon: (props: React.SVGProps<SVGSVGElement>) => (
       <svg
         {...props}
