@@ -128,6 +128,8 @@
   --animate-shine-3: shine-3 12s ease-in-out infinite;
   --animate-gradient: gradient-flow 6s ease-in-out infinite;
   --animate-float: float 4s ease-in-out infinite;
+  --animate-float-delayed: float-delayed 5s ease-in-out 1.2s infinite;
+  --animate-pulse-glow: pulse-glow 4s ease-in-out infinite;
 
   @keyframes shine-1 {
     0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
@@ -153,7 +155,17 @@
 
   @keyframes float {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
+    50% { transform: translateY(-6px); }
+  }
+
+  @keyframes float-delayed {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 0.85; transform: scale(1.03); }
   }
 }
 
