@@ -77,6 +77,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="min-h-dvh bg-background text-foreground antialiased">
         <ThemeProvider>{children}</ThemeProvider>
       </body>

@@ -106,13 +106,15 @@ export function HeroSection() {
             Tech I work with
           </span>
           <div className="flex flex-wrap items-center justify-center gap-3 sm:justify-start">
-            {[
+            {["JavaScript",
               "TypeScript",
               "React",
               "Next.js",
               "Node.js",
-              "Python",
-              "AWS",
+              "mongoDB",
+              "PostgreSQL",
+              "Docker",
+              "Jenkins"
             ].map((tech) => (
               <span
                 key={tech}
