@@ -1,26 +1,174 @@
 @import "tailwindcss";
 
+/* ─── Design Tokens ─── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Surface & Background */
+  --background: #fafafa;
+  --background-secondary: #f4f4f5;
+  --surface: #ffffff;
+  --surface-hover: #f4f4f5;
+
+  /* Text */
+  --foreground: #18181b;
+  --foreground-secondary: #52525b;
+  --foreground-muted: #a1a1aa;
+
+  /* Brand / Accent */
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-subtle: #dbeafe;
+  --accent-foreground: #ffffff;
+
+  /* Borders */
+  --border: #e4e4e7;
+  --border-hover: #d4d4d8;
+
+  /* Misc */
+  --ring: #2563eb;
+  --shadow-color: 0 0% 0%;
+  --code-bg: #f4f4f5;
+  --selection-bg: #2563eb;
+  --selection-fg: #ffffff;
 }
 
+.dark {
+  --background: #09090b;
+  --background-secondary: #18181b;
+  --surface: #111113;
+  --surface-hover: #1c1c1f;
+
+  --foreground: #fafafa;
+  --foreground-secondary: #a1a1aa;
+  --foreground-muted: #52525b;
+
+  --accent: #3b82f6;
+  --accent-hover: #60a5fa;
+  --accent-subtle: rgba(59, 130, 246, 0.12);
+  --accent-foreground: #ffffff;
+
+  --border: #27272a;
+  --border-hover: #3f3f46;
+
+  --ring: #3b82f6;
+  --shadow-color: 0 0% 0%;
+  --code-bg: #1c1c1f;
+  --selection-bg: #3b82f6;
+  --selection-fg: #ffffff;
+}
+
+/* ─── Tailwind v4 Theme ─── */
 @theme inline {
   --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+
   --color-foreground: var(--foreground);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-foreground-muted: var(--foreground-muted);
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-subtle: var(--accent-subtle);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-border: var(--border);
+  --color-border-hover: var(--border-hover);
+
+  --color-ring: var(--ring);
+  --color-code-bg: var(--code-bg);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Animation tokens */
+  --animate-fade-in: fade-in 0.6s ease-out forwards;
+  --animate-fade-in-up: fade-in-up 0.6s ease-out forwards;
+  --animate-fade-in-down: fade-in-down 0.5s ease-out forwards;
+  --animate-slide-in-left: slide-in-left 0.6s ease-out forwards;
+  --animate-scale-in: scale-in 0.5s ease-out forwards;
+  --animate-pulse-slow: pulse-slow 3s ease-in-out infinite;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fade-in-down {
+    from { opacity: 0; transform: translateY(-12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slide-in-left {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes scale-in {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.7; }
   }
 }
 
+/* ─── Base Styles ─── */
+*,
+*::before,
+*::after {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-fg);
+}
+
+/* ─── Focus Styles ─── */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── Utility: animation delay helpers ─── */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+
+/* ─── Reduced motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
