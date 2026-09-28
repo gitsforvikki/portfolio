@@ -8,21 +8,25 @@ function StatusDot() {
   );
 }
 
-/** Subtle grid pattern for visual depth. */
-function GridBackground() {
+/** Animated shining background with drifting glow orbs. */
+function ShiningBackground() {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-      {/* Dot grid */}
+      {/* Dot grid (very subtle) */}
       <div
-        className="absolute inset-0 opacity-[0.03] dark:opacity-[0.06]"
+        className="absolute inset-0 opacity-[0.025] dark:opacity-[0.04]"
         style={{
           backgroundImage:
             "radial-gradient(circle, currentColor 1px, transparent 1px)",
           backgroundSize: "32px 32px",
         }}
       />
-      {/* Radial fade from center-top */}
-      <div className="absolute -top-40 left-1/2 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-accent/5 blur-3xl dark:bg-accent/8" />
+      {/* Primary glow orb — blue, top-right drift */}
+      <div className="absolute -top-32 -right-32 h-[500px] w-[500px] animate-shine-1 rounded-full bg-blue-500/10 blur-[100px] dark:bg-blue-500/15" />
+      {/* Secondary glow orb — violet, bottom-left drift */}
+      <div className="absolute -bottom-40 -left-32 h-[450px] w-[450px] animate-shine-2 rounded-full bg-violet-500/8 blur-[100px] dark:bg-violet-500/12" />
+      {/* Tertiary glow orb — indigo, center float */}
+      <div className="absolute top-1/3 left-1/2 h-[350px] w-[350px] -translate-x-1/2 animate-shine-3 rounded-full bg-indigo-500/6 blur-[80px] dark:bg-indigo-500/10" />
     </div>
   );
 }
@@ -34,7 +38,7 @@ export function HeroSection() {
       className="relative flex min-h-[100dvh] items-center justify-center overflow-hidden px-5 pt-16 sm:px-8"
       aria-label="Introduction"
     >
-      <GridBackground />
+      <ShiningBackground />
 
       <div className="relative z-10 mx-auto w-full max-w-3xl py-20 sm:py-28 lg:py-32">
         {/* Availability Badge */}
@@ -48,7 +52,7 @@ export function HeroSection() {
         {/* Headline */}
         <h1 className="text-center text-4xl font-bold leading-[1.15] tracking-tight text-foreground sm:text-left sm:text-5xl lg:text-6xl animate-fade-in-up">
           Hi, I&apos;m{" "}
-          <span className="text-accent">Vikash</span>
+          <span className="bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 bg-clip-text text-transparent dark:from-blue-400 dark:via-indigo-400 dark:to-violet-400">Vikash</span>
           <br />
           <span className="text-foreground-secondary">
             Software Developer
