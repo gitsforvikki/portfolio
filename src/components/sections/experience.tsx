@@ -127,8 +127,8 @@ export function ExperienceSection() {
             .
           </h2>
           <p className="mt-4 text-base leading-relaxed text-foreground-secondary sm:text-lg">
-            A track record of engineering scalable frontend architectures, dependable REST APIs,
-            and high-visibility web applications.
+            A track record of engineering scalable frontend architectures, dependable REST APIs, and
+            high-visibility web applications.
           </p>
         </div>
 
@@ -185,9 +185,7 @@ export function ExperienceSection() {
                   <div className="mt-4 md:mt-0 md:col-span-8">
                     <div className="rounded-2xl border border-border bg-surface p-6 sm:p-8 shadow-xs transition-all duration-200 hover:border-border-hover hover:shadow-sm">
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-border/70 pb-4">
-                        <h4 className="text-lg font-bold text-foreground">
-                          {exp.role}
-                        </h4>
+                        <h4 className="text-lg font-bold text-foreground">{exp.role}</h4>
                         <span className="font-mono text-xs font-medium text-accent">
                           Production Engineering
                         </span>

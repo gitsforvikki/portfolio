@@ -121,7 +121,7 @@ export function AboutSection() {
       {
         threshold: 0.15,
         rootMargin: "0px 0px -50px 0px",
-      },
+      }
     );
 
     observer.observe(target);
@@ -148,10 +148,7 @@ export function AboutSection() {
           }`}
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 font-mono text-xs font-medium text-accent shadow-xs">
-            <span
-              className="h-1.5 w-1.5 rounded-full bg-accent"
-              aria-hidden="true"
-            />
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
             01 // About Me
           </div>
           <h2
@@ -183,9 +180,8 @@ export function AboutSection() {
           >
             <div className="space-y-4 text-base leading-relaxed text-foreground-secondary">
               <p>
-                I’m a Full Stack Developer focused on building scalable,
-                responsive, and user-friendly web applications with modern
-                JavaScript technologies.
+                I’m a Full Stack Developer focused on building scalable, responsive, and
+                user-friendly web applications with modern JavaScript technologies.
               </p>
               <p>
                 My core expertise lies in{" "}
@@ -193,18 +189,16 @@ export function AboutSection() {
                   React.js, Next.js, Node.js, Express.js, MongoDB, and PostgreSQL
                 </span>
                 , with hands-on experience building applications from the ground up — from designing
-                responsive interfaces and integrating APIs to implementing
-                backend business logic,{" "}
+                responsive interfaces and integrating APIs to implementing backend business logic,{" "}
                 <span className="font-medium text-foreground underline decoration-1 underline-offset-4 decoration-blue-500/40 dark:decoration-blue-400/40 hover:decoration-blue-500 dark:hover:decoration-blue-400 transition-colors">
                   authentication, databases, payments, and production deployments
                 </span>
                 .
               </p>
               <p>
-                I enjoy solving real-world engineering problems and building
-                applications that are not only visually polished but also
-                maintainable, performant, and scalable. My experience includes
-                SEO optimization, REST APIs, real-time communication, state
+                I enjoy solving real-world engineering problems and building applications that are
+                not only visually polished but also maintainable, performant, and scalable. My
+                experience includes SEO optimization, REST APIs, real-time communication, state
                 management, authentication, payment integrations,{" "}
                 <span className="font-medium text-foreground underline decoration-1 underline-offset-4 decoration-blue-500/40 dark:decoration-blue-400/40 hover:decoration-blue-500 dark:hover:decoration-blue-400 transition-colors">
                   Dockerized applications, and production deployments
@@ -212,22 +206,19 @@ export function AboutSection() {
                 .
               </p>
               <p>
-                I also work with modern engineering practices and architectures
-                including{" "}
+                I also work with modern engineering practices and architectures including{" "}
                 <span className="font-medium text-foreground underline decoration-1 underline-offset-4 decoration-blue-500/40 dark:decoration-blue-400/40 hover:decoration-blue-500 dark:hover:decoration-blue-400 transition-colors">
                   Micro Frontends, Docker, Kubernetes, and CI/CD pipelines with Jenkins
                 </span>
-                , giving me a broader understanding of how
-                applications are developed, containerized, deployed, and scaled
-                in production environments.
+                , giving me a broader understanding of how applications are developed,
+                containerized, deployed, and scaled in production environments.
               </p>
               <p>
                 I’m continuously exploring better ways to{" "}
                 <span className="font-medium text-foreground underline decoration-1 underline-offset-4 decoration-blue-500/40 dark:decoration-blue-400/40 hover:decoration-blue-500 dark:hover:decoration-blue-400 transition-colors">
                   design systems
                 </span>
-                , improve developer experience, and turn ideas into reliable
-                software.
+                , improve developer experience, and turn ideas into reliable software.
               </p>
             </div>
 
@@ -268,9 +259,7 @@ export function AboutSection() {
                   <div className="h-2.5 w-2.5 rounded-full bg-amber-400/80 dark:bg-amber-500/60" />
                   <div className="h-2.5 w-2.5 rounded-full bg-emerald-400/80 dark:bg-emerald-500/60" />
                 </div>
-                <span className="font-mono text-xs text-foreground-muted">
-                  principles.ts
-                </span>
+                <span className="font-mono text-xs text-foreground-muted">principles.ts</span>
                 <div className="w-10" aria-hidden="true" />
               </div>
 
@@ -310,8 +299,8 @@ export function AboutSection() {
                     <span className="text-accent">⚡</span> Current Focus
                   </div>
                   <p className="mt-1 text-xs leading-relaxed text-foreground-secondary">
-                    Distributed web architecture, full-stack TypeScript,
-                    high-performance rendering, and developer tooling.
+                    Distributed web architecture, full-stack TypeScript, high-performance rendering,
+                    and developer tooling.
                   </p>
                 </div>
               </div>

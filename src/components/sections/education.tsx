@@ -184,15 +184,9 @@ export function EducationSection() {
                   <h4 className="text-xl font-bold tracking-tight text-foreground transition-colors group-hover:text-accent">
                     {edu.degree}
                   </h4>
-                  <p className="text-sm font-medium text-foreground-secondary">
-                    {edu.field}
-                  </p>
-                  <p className="font-mono text-xs text-foreground-muted pt-1">
-                    {edu.institution}
-                  </p>
-                  <p className="font-mono text-xs text-foreground-muted">
-                    {edu.location}
-                  </p>
+                  <p className="text-sm font-medium text-foreground-secondary">{edu.field}</p>
+                  <p className="font-mono text-xs text-foreground-muted pt-1">{edu.institution}</p>
+                  <p className="font-mono text-xs text-foreground-muted">{edu.location}</p>
                 </div>
 
                 <div className="mt-6 pt-5 border-t border-border/60 space-y-2.5">

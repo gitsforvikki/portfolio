@@ -163,8 +163,8 @@ export function ProjectsSection() {
             .
           </h2>
           <p className="mt-4 text-base leading-relaxed text-foreground-secondary sm:text-lg">
-            Full-stack web platforms and real-time systems designed with clean architecture,
-            type safety, and high-performance user experiences.
+            Full-stack web platforms and real-time systems designed with clean architecture, type
+            safety, and high-performance user experiences.
           </p>
         </div>
 

@@ -206,7 +206,8 @@ export function ContactSection() {
                     Location
                   </span>
                   <p className="text-sm font-semibold text-foreground">
-                    Bengaluru, India <span className="font-normal text-foreground-muted">(IST • UTC+5:30)</span>
+                    Bengaluru, India{" "}
+                    <span className="font-normal text-foreground-muted">(IST • UTC+5:30)</span>
                   </p>
                 </div>
               </div>
@@ -240,9 +241,7 @@ export function ContactSection() {
                   <span className="block text-xs font-semibold text-foreground group-hover:text-accent transition-colors">
                     GitHub
                   </span>
-                  <span className="font-mono text-[10px] text-foreground-muted">
-                    @gitsforvikki
-                  </span>
+                  <span className="font-mono text-[10px] text-foreground-muted">@gitsforvikki</span>
                 </div>
               </a>
 
@@ -292,9 +291,7 @@ export function ContactSection() {
             <div className="rounded-2xl border border-border bg-surface p-6 sm:p-8 shadow-xs">
               <div className="flex items-center justify-between border-b border-border/70 pb-4">
                 <div>
-                  <h3 className="text-lg font-bold text-foreground">
-                    Send a Message
-                  </h3>
+                  <h3 className="text-lg font-bold text-foreground">Send a Message</h3>
                   <p className="mt-1 text-xs text-foreground-secondary">
                     Fill out the form below and I&apos;ll get in touch with you shortly.
                   </p>
@@ -325,8 +322,8 @@ export function ContactSection() {
                   <div className="text-xs sm:text-sm">
                     <p className="font-semibold">Message delivered successfully!</p>
                     <p className="mt-0.5 opacity-90">
-                      Thank you for reaching out. I will respond to your inquiry via email as soon as
-                      possible.
+                      Thank you for reaching out. I will respond to your inquiry via email as soon
+                      as possible.
                     </p>
                   </div>
                 </div>
@@ -419,7 +416,9 @@ export function ContactSection() {
                   >
                     <option value="Full-Time Role">Full-Time Software Engineering Role</option>
                     <option value="Contract / Freelance">Freelance / Contract Project</option>
-                    <option value="Technical Consulting">Technical Architecture & Consulting</option>
+                    <option value="Technical Consulting">
+                      Technical Architecture & Consulting
+                    </option>
                     <option value="General Conversation">General Conversation / Connect</option>
                   </select>
                 </div>

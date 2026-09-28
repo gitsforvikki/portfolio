@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+.next/
+out/
+build/
+dist/
+
+# Logs & cache
+*.log
+*.tsbuildinfo
+.vercel/
+
+# Environment and sensitive files
+.env*
+
+# Static & generated files
+public/
+next-env.d.ts
+package-lock.json
+AGENTS.md
+

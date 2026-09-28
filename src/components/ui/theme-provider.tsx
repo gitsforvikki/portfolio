@@ -24,9 +24,7 @@ const STORAGE_KEY = "portfolio-theme";
 
 function getSystemTheme(): ResolvedTheme {
   if (typeof window === "undefined") return "light";
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 }
 
 function resolveTheme(theme: Theme): ResolvedTheme {
@@ -80,7 +78,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const theme = useSyncExternalStore(
     themeStore.subscribe,
     themeStore.getSnapshot,
-    themeStore.getServerSnapshot,
+    themeStore.getServerSnapshot
   );
   const resolvedTheme = resolveTheme(theme);
   const mountedRef = useRef(false);
@@ -109,11 +107,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     themeStore.setTheme(newTheme);
   }, []);
 
-  return (
-    <ThemeContext value={{ theme, resolvedTheme, setTheme }}>
-      {children}
-    </ThemeContext>
-  );
+  return <ThemeContext value={{ theme, resolvedTheme, setTheme }}>{children}</ThemeContext>;
 }
 
 export function useTheme() {

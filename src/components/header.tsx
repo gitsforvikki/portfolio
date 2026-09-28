@@ -169,9 +169,7 @@ export function Header() {
             {/* Social Links & Direct Action in Drawer */}
             <div className="pt-4 border-t border-border/70 space-y-4">
               <div className="flex items-center justify-between">
-                <span className="font-mono text-xs text-foreground-muted">
-                  Connect with me
-                </span>
+                <span className="font-mono text-xs text-foreground-muted">Connect with me</span>
                 <div className="flex items-center gap-2">
                   <a
                     href="https://github.com/gitsforvikki"

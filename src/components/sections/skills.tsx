@@ -284,8 +284,8 @@ export function SkillsSection() {
             .
           </h2>
           <p className="mt-4 text-base leading-relaxed text-foreground-secondary sm:text-lg">
-            A specialized full-stack toolkit focused on modern TypeScript architectures,
-            responsive frontend engineering, resilient APIs, and reliable cloud deployments.
+            A specialized full-stack toolkit focused on modern TypeScript architectures, responsive
+            frontend engineering, resilient APIs, and reliable cloud deployments.
           </p>
         </div>
 
@@ -307,9 +307,7 @@ export function SkillsSection() {
                 Primary Core Stack
               </h3>
             </div>
-            <span className="font-mono text-xs text-foreground-muted">
-              Full Stack Focus
-            </span>
+            <span className="font-mono text-xs text-foreground-muted">Full Stack Focus</span>
           </div>
 
           <div className="mt-5 grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-5">
@@ -324,9 +322,7 @@ export function SkillsSection() {
                   </span>
                   <span className="h-1.5 w-1.5 rounded-full bg-accent/60 transition-all duration-200 group-hover:scale-125 group-hover:bg-accent" />
                 </div>
-                <span className="mt-1 text-[11px] text-foreground-muted">
-                  {item.role}
-                </span>
+                <span className="mt-1 text-[11px] text-foreground-muted">{item.role}</span>
               </div>
             ))}
           </div>
@@ -340,14 +336,14 @@ export function SkillsSection() {
               index === 0
                 ? "delay-200"
                 : index === 1
-                ? "delay-250"
-                : index === 2
-                ? "delay-300"
-                : index === 3
-                ? "delay-350"
-                : index === 4
-                ? "delay-400"
-                : "delay-450";
+                  ? "delay-250"
+                  : index === 2
+                    ? "delay-300"
+                    : index === 3
+                      ? "delay-350"
+                      : index === 4
+                        ? "delay-400"
+                        : "delay-450";
 
             return (
               <div
@@ -388,10 +384,7 @@ export function SkillsSection() {
                         }`}
                       >
                         {skill.isCore && (
-                          <span
-                            className="h-1.5 w-1.5 rounded-full bg-accent"
-                            aria-hidden="true"
-                          />
+                          <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
                         )}
                         {skill.name}
                       </span>

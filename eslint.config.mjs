@@ -5,7 +5,7 @@ import nextTs from "eslint-config-next/typescript";
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
-    {
+  {
     rules: {
       // Prevent unused variables/imports
       "@typescript-eslint/no-unused-vars": [
@@ -24,10 +24,10 @@ const eslintConfig = defineConfig([
       "prefer-const": "error",
 
       // Prevent accidental == instead of ===
-      "eqeqeq": ["error", "always"],
+      eqeqeq: ["error", "always"],
     },
   },
-  
+
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:

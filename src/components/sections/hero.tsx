@@ -20,8 +20,7 @@ function ShiningBackground() {
       <div
         className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
         style={{
-          backgroundImage:
-            "radial-gradient(circle, currentColor 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(circle, currentColor 1px, transparent 1px)",
           backgroundSize: "32px 32px",
         }}
       />
@@ -89,7 +88,9 @@ export function HeroSection() {
 
             {/* Subtitle / Narrative */}
             <p className="mt-5 max-w-xl text-base leading-relaxed text-foreground-secondary sm:text-lg sm:leading-relaxed animate-fade-in-up delay-200">
-              I design and build reliable, scalable full-stack applications with clean architecture and thoughtful user experiences. Experienced in creating production-grade software with modern web stacks.
+              I design and build reliable, scalable full-stack applications with clean architecture
+              and thoughtful user experiences. Experienced in creating production-grade software
+              with modern web stacks.
             </p>
 
             {/* CTAs */}
@@ -251,33 +252,55 @@ export function HeroSection() {
                       <span className="text-purple-600 dark:text-purple-400 font-semibold">
                         const
                       </span>{" "}
-                      <span className="text-blue-600 dark:text-sky-300 font-bold">
-                        developer
-                      </span>
-                      : <span className="text-emerald-600 dark:text-emerald-400">Engineer</span> = &#123;
+                      <span className="text-blue-600 dark:text-sky-300 font-bold">developer</span>:{" "}
+                      <span className="text-emerald-600 dark:text-emerald-400">Engineer</span> =
+                      &#123;
                     </div>
                     <div className="pl-4">
                       <span className="text-foreground-secondary">name:</span>{" "}
-                      <span className="text-amber-600 dark:text-amber-300">&quot;Vikash&quot;</span>,
+                      <span className="text-amber-600 dark:text-amber-300">&quot;Vikash&quot;</span>
+                      ,
                     </div>
                     <div className="pl-4">
                       <span className="text-foreground-secondary">role:</span>{" "}
-                      <span className="text-amber-600 dark:text-amber-300">&quot;Full Stack Software Dev&quot;</span>,
+                      <span className="text-amber-600 dark:text-amber-300">
+                        &quot;Full Stack Software Dev&quot;
+                      </span>
+                      ,
                     </div>
                     <div className="pl-4">
                       <span className="text-foreground-secondary">focus:</span>{" "}
-                      <span className="text-amber-600 dark:text-amber-300">&quot;Scalable Web Architectures&quot;</span>,
+                      <span className="text-amber-600 dark:text-amber-300">
+                        &quot;Scalable Web Architectures&quot;
+                      </span>
+                      ,
                     </div>
+
                     <div className="pl-4">
                       <span className="text-foreground-secondary">coreStack:</span> [
-                      <span className="text-emerald-600 dark:text-emerald-300">&quot;React&quot;</span>,{" "}
-                      <span className="text-emerald-600 dark:text-emerald-300">&quot;Next.js&quot;</span>,{" "}
-                      <span className="text-emerald-600 dark:text-emerald-300">&quot;Node&quot;</span>,{" "}
-                      <span className="text-emerald-600 dark:text-emerald-300">&quot;Docker&quot;</span>],
+                      <span className="text-emerald-600 dark:text-emerald-300">
+                        &quot;React&quot;
+                      </span>
+                      ,{" "}
+                      <span className="text-emerald-600 dark:text-emerald-300">
+                        &quot;Next.js&quot;
+                      </span>
+                      ,{" "}
+                      <span className="text-emerald-600 dark:text-emerald-300">
+                        &quot;Node&quot;
+                      </span>
+                      ,{" "}
+                      <span className="text-emerald-600 dark:text-emerald-300">
+                        &quot;Docker&quot;
+                      </span>
+                      ],
                     </div>
                     <div className="pl-4">
                       <span className="text-foreground-secondary">status:</span>{" "}
-                      <span className="text-emerald-600 dark:text-emerald-400 font-semibold">&quot;ready_to_deploy&quot;</span>,
+                      <span className="text-emerald-600 dark:text-emerald-400 font-semibold">
+                        &quot;ready_to_deploy&quot;
+                      </span>
+                      ,
                     </div>
                     <div className="pl-4">
                       <span className="text-purple-600 dark:text-purple-400">build</span>: () =&gt;{" "}
@@ -393,9 +416,7 @@ export function HeroSection() {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-foreground">
-                    Clean Architecture
-                  </div>
+                  <div className="text-xs font-bold text-foreground">Clean Architecture</div>
                   <div className="font-mono text-[10px] text-emerald-600 dark:text-emerald-400">
                     ⚡ High Performance
                   </div>
@@ -426,9 +447,7 @@ export function HeroSection() {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-foreground">
-                    Full Stack Ready
-                  </div>
+                  <div className="text-xs font-bold text-foreground">Full Stack Ready</div>
                   <div className="font-mono text-[10px] text-foreground-muted">
                     🚀 2+ Years Production
                   </div>

@@ -6,22 +6,14 @@ export function ThemeToggle() {
   const { resolvedTheme, setTheme, theme } = useTheme();
 
   const cycleTheme = () => {
-    const order: Array<"light" | "dark" | "system"> = [
-      "light",
-      "dark",
-      "system",
-    ];
+    const order: Array<"light" | "dark" | "system"> = ["light", "dark", "system"];
     const currentIndex = order.indexOf(theme);
     const next = order[(currentIndex + 1) % order.length];
     setTheme(next);
   };
 
   const label =
-    theme === "system"
-      ? "System theme"
-      : theme === "dark"
-        ? "Dark theme"
-        : "Light theme";
+    theme === "system" ? "System theme" : theme === "dark" ? "Dark theme" : "Light theme";
 
   return (
     <button
