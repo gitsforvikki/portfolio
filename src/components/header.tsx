@@ -8,6 +8,7 @@ const NAV_ITEMS = [
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
+  { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ] as const;
 
@@ -60,9 +61,10 @@ export function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="rounded-lg px-3 py-2 text-sm font-medium text-foreground-secondary transition-colors hover:bg-surface-hover hover:text-foreground"
+              className="group relative rounded-lg px-3 py-2 text-sm font-medium text-foreground-secondary transition-colors hover:text-foreground"
             >
-              {item.label}
+              <span>{item.label}</span>
+              <span className="absolute bottom-1 left-3 right-3 h-[2px] scale-x-0 rounded-full bg-accent transition-transform duration-200 group-hover:scale-x-100" />
             </a>
           ))}
           <div className="ml-3 border-l border-border pl-3">

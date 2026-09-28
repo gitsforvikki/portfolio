@@ -316,13 +316,13 @@ export function SkillsSection() {
             {CORE_STACK.map((item) => (
               <div
                 key={item.name}
-                className="group relative flex flex-col justify-between rounded-xl border border-border bg-background p-3.5 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/50 hover:bg-surface-hover hover:shadow-xs"
+                className="group relative flex flex-col justify-between rounded-xl border border-border bg-background p-3.5 transition-all duration-200 hover:-translate-y-1 hover:border-accent/60 hover:bg-surface-hover hover:shadow-md hover:shadow-accent/10 active:scale-95"
               >
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-sm font-semibold text-foreground group-hover:text-accent transition-colors">
                     {item.name}
                   </span>
-                  <span className="h-1.5 w-1.5 rounded-full bg-accent/60 group-hover:bg-accent transition-colors" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent/60 transition-all duration-200 group-hover:scale-125 group-hover:bg-accent" />
                 </div>
                 <span className="mt-1 text-[11px] text-foreground-muted">
                   {item.role}
@@ -352,7 +352,7 @@ export function SkillsSection() {
             return (
               <div
                 key={category.title}
-                className={`flex flex-col justify-between rounded-2xl border border-border bg-surface p-6 shadow-xs transition-all duration-700 ease-out hover:border-border-hover hover:shadow-sm ${delayClass} ${
+                className={`group/card flex flex-col justify-between rounded-2xl border border-border bg-surface p-6 shadow-xs transition-all duration-300 ease-out hover:-translate-y-1 hover:border-border-hover hover:shadow-md ${delayClass} ${
                   isVisible
                     ? "translate-y-0 opacity-100"
                     : "translate-y-8 opacity-0 motion-reduce:translate-y-0 motion-reduce:opacity-100"
@@ -361,15 +361,15 @@ export function SkillsSection() {
                 <div>
                   {/* Category Header */}
                   <div className="flex items-center justify-between">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-background text-accent">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-background text-accent transition-transform duration-300 group-hover/card:scale-110 group-hover/card:border-accent/40">
                       <Icon className="h-5 w-5" />
                     </div>
-                    <span className="rounded-full border border-border/80 bg-background-secondary/60 px-2.5 py-0.5 font-mono text-[11px] font-medium text-foreground-secondary">
+                    <span className="rounded-full border border-border/80 bg-background-secondary/60 px-2.5 py-0.5 font-mono text-[11px] font-medium text-foreground-secondary transition-colors group-hover/card:border-accent/30 group-hover/card:text-accent">
                       {category.badge}
                     </span>
                   </div>
 
-                  <h3 className="mt-4 text-base font-semibold text-foreground">
+                  <h3 className="mt-4 text-base font-semibold text-foreground transition-colors group-hover/card:text-accent">
                     {category.title}
                   </h3>
                   <p className="mt-1 text-xs leading-relaxed text-foreground-muted">
@@ -381,10 +381,10 @@ export function SkillsSection() {
                     {category.skills.map((skill) => (
                       <span
                         key={skill.name}
-                        className={`inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1 text-xs font-medium transition-all duration-150 ${
+                        className={`inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1 text-xs font-medium transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.04] active:scale-95 ${
                           skill.isCore
-                            ? "border-accent/30 bg-accent-subtle/50 text-foreground font-semibold hover:border-accent hover:bg-accent-subtle"
-                            : "border-border bg-background text-foreground-secondary hover:border-border-hover hover:bg-surface-hover hover:text-foreground"
+                            ? "border-accent/30 bg-accent-subtle/50 text-foreground font-semibold hover:border-accent hover:bg-accent-subtle hover:shadow-xs"
+                            : "border-border bg-background text-foreground-secondary hover:border-accent/40 hover:bg-surface-hover hover:text-foreground"
                         }`}
                       >
                         {skill.isCore && (

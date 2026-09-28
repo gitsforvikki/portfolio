@@ -52,7 +52,9 @@ export function HeroSection() {
         {/* Headline */}
         <h1 className="text-center text-4xl font-bold leading-[1.15] tracking-tight text-foreground sm:text-left sm:text-5xl lg:text-6xl animate-fade-in-up">
           Hi, I&apos;m{" "}
-          <span className="bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 bg-clip-text text-transparent dark:from-blue-400 dark:via-indigo-400 dark:to-violet-400">Vikash</span>
+          <span className="bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient dark:from-blue-400 dark:via-indigo-400 dark:to-violet-400">
+            Vikash
+          </span>
           <br />
           <span className="text-foreground-secondary">
             Software Developer
@@ -71,15 +73,28 @@ export function HeroSection() {
           {/* Primary CTA */}
           <a
             href="#contact"
-            className="inline-flex h-12 items-center justify-center rounded-lg bg-accent px-7 text-sm font-semibold text-accent-foreground shadow-sm transition-all duration-200 hover:bg-accent-hover hover:shadow-md focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="group inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-accent px-7 text-sm font-semibold text-accent-foreground shadow-xs transition-all duration-200 hover:-translate-y-0.5 hover:bg-accent-hover hover:shadow-md hover:shadow-accent/25 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
-            Get in Touch
+            <span>Get in Touch</span>
+            <svg
+              className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m9 18 6-6-6-6" />
+            </svg>
           </a>
 
           {/* Secondary CTA */}
           <a
             href="#projects"
-            className="inline-flex h-12 items-center justify-center rounded-lg border border-border bg-surface px-7 text-sm font-semibold text-foreground transition-all duration-200 hover:border-border-hover hover:bg-surface-hover focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="inline-flex h-12 items-center justify-center rounded-lg border border-border bg-surface px-7 text-sm font-semibold text-foreground transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-surface-hover hover:text-accent focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             View Projects
           </a>
@@ -101,7 +116,7 @@ export function HeroSection() {
             ].map((tech) => (
               <span
                 key={tech}
-                className="rounded-md border border-border bg-surface px-3 py-1 font-mono text-xs text-foreground-secondary transition-colors hover:border-border-hover hover:text-foreground"
+                className="rounded-md border border-border bg-surface px-3 py-1 font-mono text-xs text-foreground-secondary transition-all duration-200 hover:-translate-y-0.5 hover:scale-105 hover:border-accent/50 hover:text-accent"
               >
                 {tech}
               </span>
@@ -111,28 +126,18 @@ export function HeroSection() {
       </div>
 
       {/* Scroll hint */}
-      <div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in delay-700"
-        aria-hidden="true"
+      <a
+        href="#about"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in delay-700 flex flex-col items-center gap-2 group cursor-pointer"
+        aria-label="Scroll to About section"
       >
-        <div className="flex flex-col items-center gap-2">
-          <span className="text-[11px] font-medium uppercase tracking-widest text-foreground-muted">
-            Scroll
-          </span>
-          <svg
-            className="h-4 w-4 animate-bounce text-foreground-muted"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="m6 9 6 6 6-6" />
-          </svg>
+        <span className="text-[10px] font-mono tracking-widest text-foreground-muted group-hover:text-foreground transition-colors uppercase">
+          Explore
+        </span>
+        <div className="h-7 w-4 rounded-full border border-foreground-muted/50 p-0.5 flex justify-center group-hover:border-accent transition-colors">
+          <div className="h-1.5 w-1 rounded-full bg-accent animate-bounce" />
         </div>
-      </div>
+      </a>
     </section>
   );
 }
