@@ -16,42 +16,34 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Vikash — Software Developer",
-    template: "%s | Vikash",
-  },
+  metadataBase: new URL("https://vikashdevportfolio.vercel.app"),
+
+  title: "Vikash Kumar | Full Stack Developer",
+
   description:
-    "Software developer specializing in building reliable, scalable applications with clean architecture. Experienced in TypeScript, React, Next.js, Node.js, Python, and cloud technologies.",
-  keywords: [
-    "software developer",
-    "full stack developer",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Python",
-    "portfolio",
-  ],
-  authors: [{ name: "Vikash" }],
-  creator: "Vikash",
+    "Full Stack Developer specializing in React, Next.js, Node.js, and modern web applications.",
+
   openGraph: {
+    title: "Vikash Kumar | Full Stack Developer",
+    description: "Building scalable and modern web applications.",
+    url: "/",
+    siteName: "Vikash Kumar Portfolio",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Vikash Kumar - Full Stack Developer",
+      },
+    ],
     type: "website",
-    locale: "en_US",
-    title: "Vikash — Software Developer",
-    description:
-      "Software developer specializing in building reliable, scalable applications with clean architecture.",
-    siteName: "Vikash Portfolio",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Vikash — Software Developer",
-    description:
-      "Software developer specializing in building reliable, scalable applications with clean architecture.",
+    images: ["/og-image.png"],
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
     shortcut: "/favicon.svg",
